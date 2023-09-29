@@ -16,5 +16,10 @@ namespace App4
         {
             InitializeComponent();
         }
+
+        async void OnPreviousPageButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
     }
 }

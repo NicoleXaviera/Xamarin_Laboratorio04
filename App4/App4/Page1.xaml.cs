@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App4;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,15 @@ namespace App4
         public Page1()
         {
             InitializeComponent();
+            btnClose.Clicked += async (sender, e) =>
+            {
+                await Navigation.PopAsync();
+            };
         }
+        async void OnNextPageButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page2());
+        }
+
     }
 }
